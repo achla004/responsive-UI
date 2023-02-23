@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import mask from "./mask.png";
 
 
-const ProfileCard = (props) => {
-    const {value} = props;
+const ProfileCard = () => {
     const [firstName,setFirstName] = useState("");
     const [lastName,setLastName] = useState("");
     const [email,setEmail] = useState("");
@@ -12,9 +11,11 @@ const ProfileCard = (props) => {
     const [graduationYear,setGraduationYear] = useState("");
     const [dob,setDob] = useState("");
   return (
-    <div className={`flex m-2 xl:flex-row lg:flex-col`}>
-      <div className="flex flex-row xl:justify-around">
-        <img src={mask} alt="mask" className="ml-4 w-28 h-28 justify-center" />
+    <div className={`flex m-2 xl:flex-row flex-col`}>
+      <div className="flex flex-row xl:justify-around justify-center mt-2">
+        <div className="flex items-center justify-center">
+        <img src={mask} alt="mask" className="ml-4 w-28 h-28 " />
+        </div>
         <div className="flex flex-col justify-center ml-2">
           <p className="text-xl text-[#000000]">John Smith</p>
           <p className="text-xs text-slate-400">Main St. Farmington, CA 123</p>
