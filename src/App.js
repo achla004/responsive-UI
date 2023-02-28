@@ -31,11 +31,12 @@ function App() {
           textColor="inherit" TabIndicatorProps={{
             sx: { backgroundColor: "#F8991F",
           }
-          }}>
-    <Tab label="Profile"value="1"  />
-    <Tab label="Wallet" value="2"  />
-    <Tab label="Activities" value="3"  />
-    <Tab label="Invitations" value="4" />
+          }}
+          inkBarStyle={{background: '#F8991F'}}>
+    <Tab label="Profile"value="1"  style={{ color: value === "1" ? "#F8991F" : "#7D7D7D"}}/>
+    <Tab label="Wallet" value="2"  style={{ color: value === "2" ? "#F8991F" : "#7D7D7D"}}/>
+    <Tab label="Activities" value="3"  style={{ color: value === "3" ? "#F8991F" : "#7D7D7D"}}/>
+    <Tab label="Invitations" value="4" style={{ color: value === "4" ? "#F8991F" : "#7D7D7D"}}/>
   </Tabs>
   </div>
       <div className="mx-4 xl:my-2 my-10">

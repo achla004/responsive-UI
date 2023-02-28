@@ -11,10 +11,10 @@ const ProfileCard = () => {
     const [graduationYear,setGraduationYear] = useState("");
     const [dob,setDob] = useState("");
   return (
-    <div className={`flex m-2 xl:flex-row flex-col`}>
-      <div className="flex flex-row xl:justify-around xl:justify-center mt-2">
-        <div className="flex items-center justify-center ml-4">
-        <img src={mask} alt="mask" className="w-24 h-24 bg-transparent opacity-100" />
+    <div className={`flex m-0 md:m-2 xl:flex-row flex-col px-4 py-4`}>
+      <div className="flex flex-row xl:justify-around xl:justify-center">
+        <div className="flex items-center justify-center ">
+        <img src={mask} alt="mask" className="bg-blend-screen flex items-center w-20 h-20 bg-transparent opacity-100" />
         </div>
         <div className="flex flex-col justify-center ml-4 font-sans">
           <p className="text-xl text-[#000000] font-sans">John Smith</p>
@@ -24,36 +24,36 @@ const ProfileCard = () => {
       <div className="flex xl:flex-col xl:justify-center xl:border-l xl:p-2 xl:ml-2">
         <div className="flex xl:justify-center xl:flex-row flex-col mt-2 ml-1 xl:ml-0">
           <span className="xl:self-center w-20 text-sm font-sans">FirstName:</span>
-          <input type="text" value={firstName} onChange={(e)=> setFirstName(e.target.value)} className="border-2 font-sans xl:w-60 md:w-36 sm:w-1/2 rounded"/>
+          <input type="text" value={firstName} onChange={(e)=> setFirstName(e.target.value)} className="border-2 font-sans xl:w-60 md:w-36 h-[35px] sm:w-1/2 rounded"/>
         </div>
-        <div className="flex xl:justify-center xl:flex-row flex-col mt-2 ml-3 xl:ml-0">
+        <div className="flex xl:justify-center xl:flex-row flex-col mt-2 ml-3 md:ml-0">
           <span className="xl:self-center w-20 text-sm font-sans text-[#202020]">LastName:</span>
-          <input type="text" value={lastName} onChange={(e)=> setLastName(e.target.value)} className="border-2 font-sans xl:w-60 md:w-36 sm:w-1/2 rounded"/>
+          <input type="text" value={lastName} onChange={(e)=> setLastName(e.target.value)} className="border-2 font-sans xl:w-60 md:w-36 h-[35px] sm:w-1/2 rounded"/>
         </div>
         <div className="xl:flex hidden xl:justify-center xl:flex-row mt-2">
           <span className="xl:self-center w-20 text-sm font-sans text-[#202020]">Email:</span>
-          <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)} className="border-2 font-sans xl:w-60 w-36 rounded"/>
+          <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)} className="border-2 font-sans xl:w-60 h-[35px] w-36 rounded"/>
         </div>
-        <div className="md:flex hidden flex-col xl:hidden mt-2 ml-3 xl:ml-0">
+        <div className="md:flex hidden flex-col xl:hidden mt-2 ml-3 md:ml-0 md:mr-2">
           <span className="w-28 font-sans text-sm font-sans text-[#202020]">Graduation Year:</span>
-          <input type="date" value={graduationYear} onChange={(e)=> setGraduationYear(e.target.value)} className="border-2 font-sans w-36 rounded"/>
+          <input type="date" value={graduationYear} onChange={(e)=> setGraduationYear(e.target.value)} className="border-2 h-[35px] font-sans w-36 rounded"/>
         </div>
       </div>
       <div className="flex xl:flex-col xl:justify-center xl:p-2 xl:ml-2">
         <div className="flex xl:justify-center xl:flex-row flex-col mt-2">
           <span className="xl:self-center w-28 text-sm font-sans text-[#202020]">Phone:</span>
-          <input type="number" value={number} onChange={(e)=> setNumber(e.target.value)} className="border-2 font-sans xl:w-40 md:w-56 sm:w-1/2 rounded"/>
+          <input type="number" value={number} onChange={(e)=> setNumber(e.target.value)} className="border-2 font-sans h-[35px] xl:w-40 md:w-56 sm:w-1/2 rounded"/>
         </div>
         <div className="flex md:hidden xl:flex xl:justify-center flex-col xl:flex-row mt-2 ml-3 xl:ml-0">
           <span className="xl:self-center w-28 font-sans text-sm text-[#202020]">Graduation Year:</span>
-          <input type="date" value={graduationYear} onChange={(e)=> setGraduationYear(e.target.value)} className="border-2 font-sans xl:w-40 md:w-56 sm:w-1/2 rounded"/>
+          <input type="date" value={graduationYear} onChange={(e)=> setGraduationYear(e.target.value)} className="border-2 font-sans h-[35px] xl:w-40 md:w-56 w-[185px] rounded"/>
         </div>
         <div className="hidden md:flex xl:justify-center xl:flex-row flex-col mt-2">
           <span className="xl:self-center font-sans w-28 text-sm text-[#202020]">Date of Birth:</span>
-          <input type="date" value={dob} onChange={(e)=> setDob(e.target.value)} className="border-2 xl:w-40 w-56 rounded font-sans" placeholder="dd/mm/yyyy"/>
+          <input type="date" value={dob} onChange={(e)=> setDob(e.target.value)} className="border-2 xl:w-40 w-56 rounded font-sans h-[35px]" placeholder="dd/mm/yyyy"/>
         </div>
       </div>
-      <div className="md:flex xl:flex-col lg:flex-row justify-center xl:p-2 xl:ml-2 mt-8 xl:mt-0 hidden">
+      <div className="md:flex xl:flex-col lg:flex-row justify-center xl:p-2 xl:ml-4 mt-8 xl:mt-0 hidden">
       <Button
         variant="contained"
         sx={{
@@ -61,8 +61,9 @@ const ProfileCard = () => {
           borderRadius: "4px",
           textTransform: "none",
           margin:"2px",
-          width:"146px",
+          width:"144px",
           fontSize:"12px",
+          height:"30px"
         }}
         size="medium"
       >
@@ -75,8 +76,9 @@ const ProfileCard = () => {
           borderRadius: "4px",
           textTransform: "none",
           margin:"2px",
-          width:"146px",
+          width:"144px",
           fontSize:"12px",
+          height:"30px"
         }}
         size="medium"
       >
@@ -89,8 +91,9 @@ const ProfileCard = () => {
           borderRadius: "4px",
           textTransform: "none",
           margin:"2px",
-          width:"146px",
+          width:"144px",
           fontSize:"12px",
+          height:"30px"
         }}
         size="medium"
       >

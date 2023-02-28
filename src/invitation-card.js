@@ -17,11 +17,22 @@ const InvitationCard = () => {
    
   ];
   const [invitationDetail, setInvitationDetail] = useState(invitationData);
+  const [activeTab, setActiveTab] = useState("2");
+
 
   return (
     <div className="md:px-6 md:py-5">
       <div className="flex justify-between mb-1">
         <p className="text-[#000000] text-lg font-sans">Invitation</p>
+        <div className="relative ml-10 flex">
+          <div className={`${activeTab === "2" ? "right-9": "left-9"} absolute rotate-45 -bottom-1.5 w-4 h-4 border-solid border bg-[#F8991F] border-[#F8991F]`}></div>
+        <div className={`${activeTab === "1" ? "z-10 bg-[#F8991F] rounded-full" : "z-1 bg-[#DBDBDB] rounded-l-full pr-2"} absolute  w-[90px] flex justify-center h-[30px]`} onClick={() => setActiveTab("1")}>
+         <p className={`${activeTab === "1" ?"text-[#FFFFFF]" : "text-[#232E3E]"} text-sm font-sans flex items-center`}>Sent (15)</p>
+        </div>
+        <div className={`${activeTab === "2" ? "z-10 bg-[#F8991F] rounded-full" : "z-1 bg-[#DBDBDB] rounded-r-full pl-2"} relative ml-20 w-[100px] flex justify-center h-[30px]`} onClick={() => setActiveTab("2")}>
+        <p className={`${activeTab === "2" ?"text-[#FFFFFF]" : "text-[#232E3E]"} text-sm font-sans flex items-center`}>Received (5)</p>
+        </div>
+        </div>
       </div>
   
         <ol class="relative md:border-r-2 md:border-gray-200"> 
@@ -30,23 +41,32 @@ const InvitationCard = () => {
        
         </span>
       {invitationDetail?.map((invitation) => (
+        <>
+        {activeTab === "1" ? 
+        <div className={`bg-[#DEE8FF] mt-4 md:mr-5 py-2 rounded-md p-4`}>
+        <span className='text-[#F8991F] text-sm font-sans'>You </span>
+        <span className='text-[#171717] text-sm font-sans'>have invited johnsmith@gmail.com to become family member.</span>
+        </div>
+         : 
         <div className={`flex justify-between bg-[#DEE8FF] mt-4 md:mr-5 py-2 rounded-md`}>
           <div className="flex justify-center items-center">
-            <img src={mask} alt="mask" className="ml-4 w-8 h-8" />
+            <img src={mask} alt="mask" className="ml-4 w-[35px] h-[35px]" />
             <p className="ml-2 ">
               <span className="text-[#F8991F] text-sm font-sans">{invitation?.name}</span> have
               invited you to become his family member
             </p>
           </div>
           <div className='flex'>
-          <div className='w-4 rounded-sm h-4 bg-white flex justify-center items-center self-center ml-1 !bg-[#0C611A]'>
+          <div className='w-7 rounded-sm h-7 bg-white flex justify-center items-center self-center ml-1 !bg-[#0C611A]'>
     <CheckIcon style={{ width: "13px",height: "10px",color:"white" }}/>
                           </div>
-                          <div className='w-4 rounded-sm h-4 bg-white flex justify-center items-center self-center ml-1 mr-4 !bg-[#FF3A3A]'>
+                          <div className='w-7 rounded-sm h-7 bg-white flex justify-center items-center self-center ml-1 mr-4 !bg-[#FF3A3A]'>
     <CloseIcon style={{ width: "13px",height: "10px", color:"white" }}/>
                           </div>
                           </div>
         </div>
+      }
+      </>
       ))}
         </li>
       
