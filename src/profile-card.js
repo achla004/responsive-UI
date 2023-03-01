@@ -53,7 +53,7 @@ const ProfileCard = () => {
           <input type="date" value={dob} onChange={(e)=> setDob(e.target.value)} className="border-2 xl:w-40 w-56 rounded font-sans h-[35px]" placeholder="dd/mm/yyyy"/>
         </div>
       </div>
-      <div className="md:flex xl:flex-col lg:flex-row justify-center xl:p-2 xl:ml-4 mt-8 xl:mt-0 hidden">
+      <div className="md:flex xl:flex-col lg:flex-row xl:justify-center md:justify-start xl:p-2 xl:ml-4 mt-8 xl:mt-0 hidden">
       <Button
         variant="contained"
         sx={{

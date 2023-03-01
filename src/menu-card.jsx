@@ -13,7 +13,7 @@ import teamwork from "./teamwork.png";
 const MenuCard = (props) => {
     const {setMenu} = props;
     return (
-        <div className="bg-[#232E3E] bg-contain">
+        <div className="bg-[#232E3E] bg-contain h-screen">
             <div className='p-4'>
                 <div className='flex justify-between'>
                     <p className='text-white text-lg ml-3 font-sans'>LOGO</p>

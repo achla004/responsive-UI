@@ -28,7 +28,7 @@ const HeaderModule = () => {
       </Button>
       </div>
       <div className="flex justify-center md:hidden mr-4">
-      <img src={menu} alt="menu" className="flex items-center self-center"/>
+      <img src={menu} alt="menu" className="flex items-center self-center pb-4"/>
       </div>
     </div>
   );
