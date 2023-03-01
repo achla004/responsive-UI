@@ -13,6 +13,14 @@ const InvitationCard = () => {
       name: "john Smith",
       isAdmin: false,
     },
+    {
+      name: "john Smith",
+      isAdmin: true,
+    },
+    {
+      name: "john Smith",
+      isAdmin: false,
+    },
    
    
   ];
@@ -21,8 +29,8 @@ const InvitationCard = () => {
 
 
   return (
-    <div className="md:px-6 md:py-5">
-      <div className="flex justify-between mb-1">
+    <div className=" elative md:pb-5 overflow-scroll h-96 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+      <div className="flex justify-between mb-1 md:pt-5 md:px-6 md:pb-2 top-0 left-0 right-0 sticky z-50 md:bg-[#F5F6F8]">
         <p className="text-[#000000] text-lg font-sans">Invitation</p>
         <div className="relative ml-10 flex">
           <div className={`${activeTab === "2" ? "right-9": "left-9"} absolute rotate-45 -bottom-1.5 w-4 h-4 border-solid border bg-[#F8991F] border-[#F8991F]`}></div>
@@ -35,7 +43,7 @@ const InvitationCard = () => {
         </div>
       </div>
   
-        <ol class="relative md:border-r-2 md:border-gray-200"> 
+        <ol class="relative md:border-r-2 md:border-gray-200 md:mx-6"> 
       <li class="">            
         <span class="absolute md:flex hidden items-center justify-center w-4 h-4 bg-gray-500 mt-5 rounded-full -right-2 ring-white dark:ring-gray-900">
        

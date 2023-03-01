@@ -23,12 +23,34 @@ const FamilyCard = () => {
         name: "Lisa Smith",
         isAdmin: false,
     },
+    {
+      name: "Dianee Russell",
+      isAdmin: false,
+  },
+  {
+      name: "Lisa Smith",
+      isAdmin: false,
+  },{
+    name: "Dianee Russell",
+    isAdmin: false,
+},
+{
+    name: "Lisa Smith",
+    isAdmin: false,
+},{
+  name: "Dianee Russell",
+  isAdmin: false,
+},
+{
+  name: "Lisa Smith",
+  isAdmin: false,
+},
     ]
     const [familyDetail,setFamilyDetail] = useState(familyData);
    
   return (
-    <div className="px-6 py-5">
-        <div className="flex justify-between mb-1">
+    <div className="relative pb-5 overflow-scroll h-96 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+        <div className="flex px-6 justify-between mb-1 pt-5 pb-2 top-0 left-0 right-0 sticky z-50 bg-[#F5F6F8]">
            <p className="text-[#000000] text-lg font-sans">Family</p> 
            <div>
            <SearchIcon fontSize="small"/>
@@ -47,17 +69,12 @@ const FamilyCard = () => {
       </Button>
       </div>
         </div>
-        <ol class="relative md:border-r-2 md:border-gray-200"> 
-      <li class="">            
-        <span class="absolute md:flex hidden items-center justify-center w-4 h-4 bg-gray-500 mt-5 rounded-full -right-2 ring-white dark:ring-gray-900">
+        <ol className="relative md:border-r-2 md:border-gray-200 mx-6"> 
+      <li className="">            
+        <span class="absolute z-10 md:flex hidden items-center justify-center w-4 h-4 bg-gray-500 mt-5 rounded-full -right-2 ring-white dark:ring-gray-900">
        
         </span>
-       
-
-    
-       
-       
-        {familyDetail?.map((family) => 
+  {familyDetail?.map((family) => 
             <div className={`flex h-14 justify-between mt-4 md:mr-5 rounded-md ${family?.isAdmin ? "bg-[#F8991F]" : "bg-[#DEE8FF]"}` }>
                 <div className="flex justify-center items-center">
                 <img src={mask} alt="mask" className="ml-4 w-[35px] h-[35px]" />
