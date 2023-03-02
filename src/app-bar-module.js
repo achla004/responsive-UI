@@ -18,17 +18,17 @@ export default function AppBarModule(props) {
           <Typography
             color="white"
             sx={{ mr: 2 }}
-            className="text-white uppercase text-xl ml-4 self-center items-center"
+            className="text-white uppercase text-lg ml-4 self-center items-center"
           >
             Logo
           </Typography>
-          <Typography sx={{ ml: 12 }} className="text-white text-base ml-4 xl:block hidden">
+          <Typography sx={{ ml: "200px" }} className="font-sans text-white text-sm ml-28 xl:block hidden">
             Menu 1
           </Typography>
-          <Typography sx={{ ml: 6 }} className="text-white text-base ml-4 xl:block hidden">
+          <Typography sx={{ ml: "112px" }} className="font-sans text-white text-sm ml-28 xl:block hidden">
             Menu 2
           </Typography>
-          <Typography sx={{ ml: 6 }} className="text-white text-base ml-4 xl:block hidden">
+          <Typography sx={{ ml: "112px" }} className="font-sans text-white text-sm ml-28 xl:block hidden">
             Menu 3
           </Typography>
         </div>
